@@ -7,7 +7,5 @@ before_install :
   - docker build -t arunbingari/docker-react -f Dockerfile.dev .
 
 script: 
-  - docker run arunbingari/docker-react npm run test -- --coverage
+  - docker run arunbingari/docker-react npm run test -- --coverage --forceExit
 
-after_success:
-  - npm run coverall
