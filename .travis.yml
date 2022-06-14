@@ -8,3 +8,6 @@ before_install :
 
 script: 
   - docker run arunbingari/docker-react npm run test -- --coverage
+
+after_success:
+  - npm run coverall
